@@ -1,58 +1,58 @@
-import { Form, Select, InputNumber, Switch, Slider, Button } from 'antd'
+import { Form, Select, InputNumber, Switch, Slider, Button } from 'antd';
 
 // Custom DatePicker that uses Day.js instead of Moment.js
-import DatePicker from '../components/DatePicker'
+import DatePicker from '../components/DatePicker';
 
-import { SmileFilled } from '@ant-design/icons'
+import { SmileFilled } from '@ant-design/icons';
 
-import Link from 'next/link'
+import Link from 'next/link';
 
-const FormItem = Form.Item
-const Option = Select.Option
+const FormItem = Form.Item;
+const Option = Select.Option;
 
 const content = {
   marginTop: '100px',
-}
+};
 
 export default function Home() {
   return (
     <div style={content}>
-      <div className="text-center mb-5">
-        <Link href="#">
-          <a className="logo mr-0">
+      <div className='text-center mb-5'>
+        <Link href='#'>
+          <a className='face mr-0'>
             <SmileFilled size={48} strokeWidth={1} />
           </a>
         </Link>
 
-        <p className="mb-0 mt-3 text-disabled">Welcome to the world !</p>
+        <p className='mb-0 mt-3 text-disabled'>Welcome to the world !</p>
       </div>
       <div>
-        <Form layout="horizontal">
+        <Form layout='horizontal'>
           <FormItem
-            label="Input Number"
+            label='Input Number'
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 8 }}
           >
             <InputNumber
-              size="large"
+              size='large'
               min={1}
               max={10}
               style={{ width: 100 }}
               defaultValue={3}
-              name="inputNumber"
+              name='inputNumber'
             />
           </FormItem>
 
           <FormItem
-            label="Switch"
+            label='Switch'
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 8 }}
           >
-            <Switch defaultChecked name="switch" />
+            <Switch defaultChecked name='switch' />
           </FormItem>
 
           <FormItem
-            label="Slider"
+            label='Slider'
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 8 }}
           >
@@ -60,45 +60,45 @@ export default function Home() {
           </FormItem>
 
           <FormItem
-            label="Select"
+            label='Select'
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 8 }}
           >
             <Select
-              size="large"
-              defaultValue="lucy"
+              size='large'
+              defaultValue='lucy'
               style={{ width: 192 }}
-              name="select"
+              name='select'
             >
-              <Option value="jack">jack</Option>
-              <Option value="lucy">lucy</Option>
-              <Option value="disabled" disabled>
+              <Option value='jack'>jack</Option>
+              <Option value='lucy'>lucy</Option>
+              <Option value='disabled' disabled>
                 disabled
               </Option>
-              <Option value="yiminghe">yiminghe</Option>
+              <Option value='yiminghe'>yiminghe</Option>
             </Select>
           </FormItem>
 
           <FormItem
-            label="DatePicker"
+            label='DatePicker'
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 8 }}
           >
-            <DatePicker name="startDate" />
+            <DatePicker name='startDate' />
           </FormItem>
           <FormItem
             style={{ marginTop: 48 }}
             wrapperCol={{ span: 8, offset: 8 }}
           >
-            <Button size="large" type="primary" htmlType="submit">
+            <Button size='large' type='primary' htmlType='submit'>
               OK
             </Button>
-            <Button size="large" style={{ marginLeft: 8 }}>
+            <Button size='large' style={{ marginLeft: 8 }}>
               Cancel
             </Button>
           </FormItem>
         </Form>
       </div>
     </div>
-  )
+  );
 }
